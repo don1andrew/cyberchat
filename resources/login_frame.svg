@@ -1,8 +1,25 @@
-<svg width="577" height="182" viewBox="0 0 577 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 577 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    #light-mask rect{ animation: highlight 5s infinite; }
+    @keyframes highlight {
+        0% { transform: translate(-400px,0) rotate(-50deg); }
+        30%  { transform: translate(430px,0) rotate(-50deg); }
+        100%  { transform: translate(450px,0) rotate(-50deg); }
+    }
+</style>
+<linearGradient id="light-gradient">
+    <stop offset="0%" stop-color="#ffffff00"/>
+    <stop offset="40%" stop-color="#FFF"/>
+    <stop offset="60%" stop-color="#FFF"/>
+    <stop offset="100%" stop-color="#ffffff00"/>
+</linearGradient>
+<mask id="light-mask"> <rect y="0" x="90" width="50" height="420" fill="url(#light-gradient)" /> 
+</mask>
 <path d="M573 139.934L576.271 136.794V79L573 72.4778V139.934Z" fill="#0E0E17" fill-opacity="0.8"/>
 <path d="M573 139.934L576.271 136.794V79L573 72.4778V139.934Z" fill="#FF3B45" fill-opacity="0.4"/>
 <path d="M54.3857 181H530.37L573 139.934V72.4778V1H54.3857V181Z" fill="#0E0E17" fill-opacity="0.8"/>
 <path d="M50 1V51.2995L44.6634 56.3778V119L50 123.353V180.907H12.401L1 172.443V96V92.6145V9.22203L5.60891 5.35284H23.802L28.1683 1H50Z" fill="#0E0E17" fill-opacity="0.8"/>
 <path d="M50 1V51.2995L44.6634 56.3778V119L50 123.353V180.907H12.401L1 172.443V96V92.6145V9.22203L5.60891 5.35284H23.802L28.1683 1H50Z" fill="#FF3B45" fill-opacity="0.4"/>
 <path d="M573 139.934L576.271 136.794V79L573 72.4778M573 139.934L530.37 181H54.3857V1H573V72.4778M573 139.934V72.4778M1 92.6145V9.22203L5.60891 5.35284H23.802L28.1683 1H50V51.2995L44.6634 56.3778V119L50 123.353V180.907H12.401L1 172.443V96M1 92.6145H13.1287V96H1M1 92.6145V96" stroke="#FF3B45" stroke-opacity="0.3"/>
+<path d="M573 139.934L576.271 136.794V79L573 72.4778M573 139.934L530.37 181H54.3857V1H573V72.4778M573 139.934V72.4778M1 92.6145V9.22203L5.60891 5.35284H23.802L28.1683 1H50V51.2995L44.6634 56.3778V119L50 123.353V180.907H12.401L1 172.443V96M1 92.6145H13.1287V96H1M1 92.6145V96" stroke="#FF3B45" stroke-opacity="0.8" mask="url(#light-mask)"/>
 </svg>

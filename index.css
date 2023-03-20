@@ -16,12 +16,12 @@
     --svg-form-input: url(resources/form_input.svg);
     --svg-form-input_invalid: url(resources/form_input_invalid.svg);
 
-    --svg-btn-left: url(resources/btn_left.svg);
-    --svg-btn-right: url(resources/btn_right.svg);
-    --svg-btn-left_hover: url(resources/btn_left_hover.svg);
-    --svg-btn-right_hover: url(resources/btn_right_hover.svg);
-    --svg-btn-left_active: url(resources/btn_left_active.svg);
-    --svg-btn-right_active: url(resources/btn_right_active.svg);
+    --svg-btn-left: url(resources/btn_modal.svg#l-default);
+    --svg-btn-right: url(resources/btn_modal.svg#r-default);
+    --svg-btn-left_hover: url(resources/btn_modal.svg#l-hover);
+    --svg-btn-right_hover: url(resources/btn_modal.svg#r-hover);
+    --svg-btn-left_active: url(resources/btn_modal.svg#l-active);
+    --svg-btn-right_active: url(resources/btn_modal.svg#r-active);
 
     --svg-frame-1: url(resources/Vector_8.svg);
     --svg-frame-2: url(resources/Vector_9.svg);
@@ -43,7 +43,7 @@ body, button, a {
 }
 
 input {
-    cursor: var(--cursor-input) 12 12, auto;
+    cursor: var(--cursor-input) 6 12, auto;
     text-align: end;
     font-size: inherit;
     font-family: inherit;
@@ -67,7 +67,9 @@ a, a:visited {
 }
 
 .login-frame {
-    background: no-repeat var(--svg-login-frame);
+    /* background: no-repeat var(--svg-login-frame); */
+    background: no-repeat url("resources/login_frame.svg#devil-view");
+    /* clip-path: url("#clipping-path-1"); */
     background-size: contain;
     min-width: 610px;
     min-height: 195px;
@@ -78,6 +80,9 @@ a, a:visited {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.login-frame:hover {
+    background-image: url("resources/login_frame.svg#monkey-view");
 }
 
 .form-content {
