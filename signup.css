@@ -1,0 +1,16 @@
+:root {
+    --svg-signup-frame: url(resources/signup_frame.svg);
+}
+.signup-frame {
+    background: no-repeat var(--svg-signup-frame);
+    background-size: contain;
+    min-width: 627px;
+    min-height: 537px;
+    padding: 20px 20px 0 55px;
+    box-sizing: border-box;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

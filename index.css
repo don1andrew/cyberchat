@@ -13,8 +13,8 @@
     --main-color: #FF3B45;
 
     --svg-login-frame: url(resources/login_frame.svg);
-    --svg-form-input: url(resources/form_input.svg);
-    --svg-form-input_invalid: url(resources/form_input_invalid.svg);
+    --svg-form-input: url(resources/form_input.svg#default);
+    --svg-form-input_invalid: url(resources/form_input.svg#invalid);
 
     --svg-btn-left: url(resources/btn_modal.svg#l-default);
     --svg-btn-right: url(resources/btn_modal.svg#r-default);
@@ -81,9 +81,6 @@ a, a:visited {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.login-frame:hover {
-    background-image: url("resources/login_frame.svg#monkey-view");
-}
 
 .form-content {
     margin: auto;
@@ -135,6 +132,7 @@ a, a:visited {
 .form-btn-container {
     position: absolute;
     right: 0;
+    top: 100%;
 }
 .btn-left,
 .btn-right {
@@ -149,7 +147,7 @@ a, a:visited {
     outline: none;
     width: 190px;
     height: 40px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .btn-left {
     background-image: var(--svg-btn-left);

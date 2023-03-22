@@ -1,3 +1,26 @@
-<svg width="348" height="46" viewBox="0 0 348 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M346.554 1V45H11.5958L1 35.3051V1H18.315L22.7084 5.97175H251.582L254.942 1H346.554Z" fill="#0E0E17" fill-opacity="0.8" stroke="#FF3B45" stroke-opacity="0.3"/>
+<svg width="349" height="46" viewBox="0 0 349 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <view id="default" viewBox="0 0 349 46" />
+    <view id="invalid" viewBox="0 46 349 46" />
+    <style>
+        .default {
+            --fill: #0E0E17;
+            --fill-opacity: 0;
+            --stroke-opacity: 0.3;
+        }
+        .invalid {
+            --fill: #232323;
+            --fill-opacity: 0.4;
+            --stroke-opacity: 1;
+        }
+    </style>
+    <defs>
+        <path id="p" d="M347.553 1V45H11.6264L1 35.3051V1H18.3651L22.7711 5.97175H252.307L255.676 1H347.553Z" />
+        <g id="elem">
+            <use href="#p" fill="#0E0E17" fill-opacity="0.8" />
+            <use href="#p" fill="#FF3B45" fill-opacity="var(--fill-opacity, 0.4)" />
+            <use href="#p" stroke="#FF3B45" stroke-opacity="var(--stroke-opacity, 0.3)" />
+        </g>
+    </defs>
+    <use href="#elem" class="default" />
+    <use href="#elem" y="46" class="invalid" />
 </svg>
