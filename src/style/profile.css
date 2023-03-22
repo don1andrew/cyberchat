@@ -1,0 +1,40 @@
+:root {
+    --svg-btn: url(../../resources/btn.svg#default);
+    --svg-btn_hover: url(../../resources/btn.svg#hover);
+    --svg-btn_active: url(../../resources/btn.svg#active);
+}
+
+.btn-container {
+    position: absolute;
+    margin: 20px;
+}
+.btn-container_left {
+    left: 0;
+}
+.btn-container_right {
+    right: 0;
+}
+
+.btn {
+    background-image: var(--svg-btn);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 228px;
+    height: 45px;
+}
+.btn:hover {
+    background-image: var(--svg-btn_hover);
+}
+.btn:active {
+    background-image: var(--svg-btn_active);
+}
