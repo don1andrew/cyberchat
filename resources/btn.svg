@@ -14,7 +14,7 @@
         }
         #light-mask rect {
             transform-origin: center;
-            animation: highlight 5s infinite;
+            animation: highlight 6s infinite;
         }
         .active {
             --fill-opacity: 0.4;
