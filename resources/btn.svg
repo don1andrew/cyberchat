@@ -9,24 +9,44 @@
         }
         .hover {
             --fill-opacity: 0.1;
-            --stroke-opacity: 1;
+            --stroke-opacity: 0.6;
+            --fill-opacity-mask: 1;
+        }
+        #light-mask rect {
+            transform-origin: center;
+            animation: highlight 5s infinite;
         }
         .active {
             --fill-opacity: 0.4;
             --stroke-opacity: 1;
         }
+        @keyframes highlight {
+            0% { transform: translate(-200px,50px) rotate(-50deg); }
+            30%  { transform: translate(100px,-100px) rotate(-50deg); }
+            100%  { transform: translate(100px,-100px) rotate(-50deg); }
+        }
     </style>
     <defs>
+        <linearGradient id="light-gradient">
+            <stop offset="0%" stop-color="#ffffff00" />
+            <stop offset="40%" stop-color="#FFF" />
+            <stop offset="60%" stop-color="#FFF" />
+            <stop offset="100%" stop-color="#ffffff00" />
+        </linearGradient>
+        <mask id="light-mask">
+            <rect y="0" x="90" width="50" height="200" fill="url(#light-gradient)" />
+        </mask>
         <path id="p" fill-rule="evenodd" clip-rule="evenodd"
             d="M8.62578 44H206.761L213.5 38.7131V4.17213H53.6711L46.7547 1H8.62578V44Z" />
+        <path id="stroke"
+            d="M8.62578 1H1V28.1393L2.59609 30.6066V37.832L1 40.123V44H8.62578M8.62578 1V44M8.62578 1H46.7547L53.6711 4.17213H213.5V38.7131L206.761 44H8.62578" />    
         <g id="elem">
             <use href="#p" fill="#0E0E17" fill-opacity="0.8" />
             <use href="#p" fill="#FF3B45" fill-opacity="var(--fill-opacity, 0.1)" />
             <path d="M8.62578 1H1V28.1393L2.59609 30.6066V37.832L1 40.123V44H8.62578V1Z" fill="#FF3B45"
                 fill-opacity="var(--fill-opacity, 0.1)" />
-            <path
-                d="M8.62578 1H1V28.1393L2.59609 30.6066V37.832L1 40.123V44H8.62578M8.62578 1V44M8.62578 1H46.7547L53.6711 4.17213H213.5V38.7131L206.761 44H8.62578"
-                stroke="#FF3B45" stroke-opacity="var(--stroke-opacity, 1)" />
+            <use href="#stroke" stroke="#FF3B45" stroke-opacity="var(--stroke-opacity, 1)"/>
+            <use href="#stroke" stroke="#FF3B45" stroke-opacity="var(--fill-opacity-mask, 0)" mask="url(#light-mask)"/>
             <rect x="5.96564" y="1.7049" width="2.12813" height="41.5902" fill="#0E0E17" fill-opacity="0.8" />
         </g>
     </defs>
