@@ -1,0 +1,15 @@
+p {
+    margin: 0;
+    line-height: 1em;
+}
+.fallback {
+    color: var(--main-color);
+    font-size: 32pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fallback > :first-child {
+    font-size: 40pt;
+}
