@@ -1,0 +1,32 @@
+<svg width="577" height="324" viewBox="0 0 577 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    #light-mask rect{ animation: highlight 5s infinite; }
+    @keyframes highlight {
+        0% { transform: translate(-400px,300px) rotate(-50deg); }
+        30%  { transform: translate(250px,-150px) rotate(-50deg); }
+        100%  { transform: translate(250px,-150px) rotate(-50deg); }
+    }
+</style>
+<defs>
+<linearGradient id="light-gradient">
+    <stop offset="0%" stop-color="#ffffff00"/>
+    <stop offset="40%" stop-color="#FFF"/>
+    <stop offset="60%" stop-color="#FFF"/>
+    <stop offset="100%" stop-color="#ffffff00"/>
+</linearGradient>
+<mask id="light-mask"> <rect y="0" x="90" width="50" height="820" fill="url(#light-gradient)" /></mask>
+<path id="p1" d="M572.614 282.069L575.886 278.928V94.5L572.614 87.9778V282.069Z" />
+<path id="p2" d="M50 1V51.4217L44.6634 56.5V261.593L50 265.946V323.5H12.401L1 315.036V156.5V153.114V9.22203L5.60891 5.35284H23.802L28.1683 1H50Z" />
+<path id="stroke1" d="M572.614 282.069L575.886 278.928V94.5L572.614 87.9778M572.614 282.069L529.984 323.135H54V1H572.614V87.9778M572.614 282.069V87.9778"/>
+<path id="stroke2" d="M1 153.114V9.22203L5.60891 5.35284H23.802L28.1683 1H50V51.4217L44.6634 56.5V261.593L50 265.946V323.5H12.401L1 315.036V156.5M1 153.114H13.1287V156.5H1M1 153.114V156.5"/>
+</defs>
+<use href="#p1" fill="#0E0E17" fill-opacity="0.8"/>
+<use href="#p1" fill="#FF3B45" fill-opacity="0.4"/>
+<path d="M54 323.135H529.984L572.614 282.069V87.9778V1H54V323.135Z" fill="#0E0E17" fill-opacity="0.8"/>
+<use href="#p2" fill="#0E0E17" fill-opacity="0.8"/>
+<use href="#p2" fill="#FF3B45" fill-opacity="0.4"/>
+<use href="#stroke1" stroke="#FF3B45" stroke-opacity="0.3"/>
+<use href="#stroke2" stroke="#FF3B45" stroke-opacity="0.3"/>
+<use href="#stroke1" stroke="#FF3B45" mask="url(#light-mask)"/>
+<use href="#stroke2" stroke="#FF3B45" mask="url(#light-mask)"/>
+</svg>

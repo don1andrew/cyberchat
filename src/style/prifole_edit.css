@@ -1,0 +1,16 @@
+:root {
+    --svg-profile-edit-frame: url(../../resources/profile_edit_frame.svg);
+}
+.profile-edit-frame {
+    background: no-repeat var(--svg-profile-edit-frame);
+    background-size: contain;
+    min-width: 677px;
+    min-height: 195px;
+    padding: 20px 20px 0 55px;
+    box-sizing: border-box;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

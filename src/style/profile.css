@@ -32,6 +32,9 @@
     width: 228px;
     height: 45px;
 }
+.btn_secondary {
+    color: var(--main-color);
+}
 .btn:hover {
     background-image: var(--svg-btn_hover);
 }
