@@ -135,7 +135,7 @@ a, a:visited {
     background-color: transparent;
     font-family: inherit;
     font-size: inherit;
-    color: inherit;
+    color: var(--accent-color);
     box-sizing: border-box;
     border: none;
     outline: none;

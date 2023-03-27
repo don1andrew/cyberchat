@@ -12,6 +12,8 @@
 
     --user-pic: url(../../resources/user_pic.png);
     /* --user-pic: url(../../resources/test.png); */
+
+    --svg-error-frame: url(../../resources/error_frame.svg);
 }
 
 .btn-container {
@@ -107,4 +109,31 @@
 }
 .profile-pic:hover .img {
     z-index: -1;
+}
+
+.pop-over {
+    margin: 0;
+    background: linear-gradient(#2c0c12d1 10%, #05090ee3 100%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    /* font-family: 'Quantico', sans-serif; */
+    /* font-size: 14pt; */
+    /* color: var(--accent-color); */
+}
+
+.error-frame {
+    background: no-repeat var(--svg-error-frame);
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--main-color);
+    min-width: 577px;
+    min-height: 115px;
+    padding: 10px 20px 0 70px;
+    box-sizing: border-box;
+    
 }
