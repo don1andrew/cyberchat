@@ -20,17 +20,19 @@
         }
     </style>
     <defs>
+        <path id="p-r" d="M213 1H1.31769V21.5064V24.5074V44.2635H199.927L213 30.7593V1Z" />
+        <path id="p-l" d="M1 1.17688H212.682V21.6833V24.6842V44.4404H14.073L1 30.9362V1.17688Z" />
         <g id="right">
-            <path d="M213 1H1.31769V21.5064V24.5074V44.2635H199.927L213 30.7593V1Z" fill="#0E0E17" fill-opacity="0.8" />
-            <path d="M213 1H1.31769V21.5064V24.5074V44.2635H199.927L213 30.7593V1Z" fill="#FF3B45" fill-opacity="0.1"
+            <use href="#p-r" fill="#0E0E17" fill-opacity="0.8" />
+            <use href="#p-r" fill="#FF3B45" fill-opacity="0.1"
                 style="fill-opacity: var(--fill-opacity, 0)" />
             <path
                 d="M1.31769 24.5074V44.2635H199.927L213 30.7593V1H1.31769V21.5064M1.31769 24.5074H30.4806V21.5064H1.31769M1.31769 24.5074V21.5064"
                 stroke="#FF3B45" stroke-opacity="0.3" style="stroke-opacity: var(--stroke-opacity, 0.3)" />
         </g>
         <g id="left">
-            <path d="M1 1.17688H212.682V21.6833V24.6842V44.4404H14.073L1 30.9362V1.17688Z" fill="#0E0E17" fill-opacity="0.8"/>
-            <path d="M1 1.17688H212.682V21.6833V24.6842V44.4404H14.073L1 30.9362V1.17688Z" fill="#FF3B45" fill-opacity="0.1"
+            <use href="#p-l"  fill="#0E0E17" fill-opacity="0.8"/>
+            <use href="#p-l"  fill="#FF3B45" fill-opacity="0.1"
                 style="fill-opacity: var(--fill-opacity, 0)"/>
             <path d="M212.682 24.6842V44.4404H14.073L1 30.9362V1.17688H212.682V21.6833M212.682 24.6842H183.519V21.6833H212.682M212.682 24.6842V21.6833"
                 stroke="#FF3B45" stroke-opacity="0.3" style="stroke-opacity: var(--stroke-opacity, 0.3)"/>

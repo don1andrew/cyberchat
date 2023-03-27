@@ -1,31 +1,27 @@
 @font-face {
     font-family: Quantico;
-    src: url(resources/fonts/QuanticoCyrillicMod-Regular.otf), url(resources/fonts/quantico/Quantico-Regular.ttf);
+    src: url(../../resources/fonts/QuanticoCyrillicMod-Regular.otf), url(../../resources/fonts/quantico/Quantico-Regular.ttf);
 }
 @font-face {
     font-family: QuanticoPassword;
-    src: url(resources/fonts/QuanticoPassword.otf);
+    src: url(../../resources/fonts/QuanticoPassword.otf);
 }
 :root {
-    --cursor: url(resources/cursor.svg);
-    --cursor-input: url(resources/cursor_input.svg);
+    --cursor: url(../../resources/cursor.svg);
+    --cursor-input: url(../../resources/cursor_input.svg);
     --accent-color: #5EF6FF;
     --main-color: #FF3B45;
 
-    --svg-login-frame: url(resources/login_frame.svg);
-    --svg-form-input: url(resources/form_input.svg#default);
-    --svg-form-input_invalid: url(resources/form_input.svg#invalid);
+    --svg-login-frame: url(../../resources/login_frame.svg);
+    --svg-form-input: url(../../resources/form_input.svg#default);
+    --svg-form-input_invalid: url(../../resources/form_input.svg#invalid);
 
-    --svg-btn-left: url(resources/btn_modal.svg#l-default);
-    --svg-btn-right: url(resources/btn_modal.svg#r-default);
-    --svg-btn-left_hover: url(resources/btn_modal.svg#l-hover);
-    --svg-btn-right_hover: url(resources/btn_modal.svg#r-hover);
-    --svg-btn-left_active: url(resources/btn_modal.svg#l-active);
-    --svg-btn-right_active: url(resources/btn_modal.svg#r-active);
-
-    /* --svg-frame-1: url(resources/Vector_8.svg);
-    --svg-frame-2: url(resources/Vector_9.svg);
-    --svg-frame-2_hover: url(resources/Vector_9-hover.svg); */
+    --svg-btn-left: url(../../resources/btn_modal.svg#l-default);
+    --svg-btn-right: url(../../resources/btn_modal.svg#r-default);
+    --svg-btn-left_hover: url(../../resources/btn_modal.svg#l-hover);
+    --svg-btn-right_hover: url(../../resources/btn_modal.svg#r-hover);
+    --svg-btn-left_active: url(../../resources/btn_modal.svg#l-active);
+    --svg-btn-right_active: url(../../resources/btn_modal.svg#r-active);
 }
 
 body {
@@ -67,9 +63,7 @@ a, a:visited {
 }
 
 .login-frame {
-    /* background: no-repeat var(--svg-login-frame); */
-    background: no-repeat url("resources/login_frame.svg#devil-view");
-    /* clip-path: url("#clipping-path-1"); */
+    background: no-repeat var(--svg-login-frame);
     background-size: contain;
     min-width: 610px;
     min-height: 195px;
@@ -141,7 +135,7 @@ a, a:visited {
     background-color: transparent;
     font-family: inherit;
     font-size: inherit;
-    color: inherit;
+    color: var(--accent-color);
     box-sizing: border-box;
     border: none;
     outline: none;
