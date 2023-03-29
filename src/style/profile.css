@@ -18,7 +18,8 @@
 
 .btn-container {
     position: absolute;
-    margin: 20px;
+    top: 0;
+    margin: 15px 5px;
 }
 .btn-container_left {
     left: 0;
