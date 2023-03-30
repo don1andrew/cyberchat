@@ -1,7 +1,7 @@
-<svg width="228" height="45" viewBox="0 0 228 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <view id="default" viewBox="0 0 228 45" />
-    <view id="hover" viewBox="0 45 228 45" />
-    <view id="active" viewBox="0 90 228 45" />
+<svg width="214" height="45" viewBox="0 0 214 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <view id="default" viewBox="0 0 214 45" />
+    <view id="hover" viewBox="0 45 214 45" />
+    <view id="active" viewBox="0 90 214 45" />
     <style>
         .default {
             --fill-opacity: 0;
