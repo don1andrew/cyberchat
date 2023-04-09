@@ -105,10 +105,10 @@
     clip-path: path("M0 0H200V137L161 170H0V0Z");
     position: relative;
 }
-.profile-pic:hover {
+.profile-pic_clickable:hover {
     --svg-profile-pic-frame_hover: var(--svg-profile-pic-frame_hover_hover);
 }
-.profile-pic:hover .img {
+.profile-pic_clickable:hover .img {
     z-index: -1;
 }
 

@@ -12,7 +12,7 @@
     <div class="chat-layout">
         <div class="column-1">
             <div class="chat-layout-search">
-                <input id="search" type="text" placeholder="SEARCH">
+                <input id="search" type="text" placeholder="SEARCH" autocomplete="off">
             </div>
             <div class="chat-layout-chatlist">
                 <div class="chatlist-item">
@@ -51,6 +51,11 @@
                     <div class="chatlist-message"></div>
                     <div class="chatlist-counter"></div>
                 </div>
+                <div class="chatlist-item add-user-item">
+                    <div class="chatlist-pic"></div>
+                    <div class="chatlist-username">SEARCH</div>
+                    <div class="chatlist-message">ADD USER</div>
+                </div>
             </div>
         </div>
         <div class="column-2">
@@ -62,7 +67,7 @@
             </div>
             <div class="divider"></div>
             <div class="chat-layout-main">
-                <div class="message message-theirs">message</div>
+                <div class="message message-theirs">В чате есть фейковая отправка и поиск)</div>
                 <div class="message message-ours">message</div>
                 <div class="message message-theirs">message</div>
                 <div class="message message-ours">::-webkit-scrollbar — the entire scrollbar.
@@ -81,7 +86,13 @@
                 <div class="grow-wrap">
                     <textarea id="message" placeholder="INPUT YOUR MESSAGE HERE" rows="1" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
                 </div>
-                <button class="chat-btn">APPEND</button>
+                <div class="dropdown">
+                    <button class="chat-btn">APPEND</button>
+                    <div class="dropdown-content">
+                        <button class="btn">PHOTO</button>
+                        <button class="btn">FILE</button>
+                    </div>
+                </div>
                 <button class="chat-btn" id="send">SEND</button>
             </div>
         </div>

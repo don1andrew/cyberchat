@@ -5,6 +5,7 @@
     --svg-btn_active: url(../../resources/btn.svg#active);
 
     --chatlist-pic: url(../../resources/user_pic_def.png);
+    --add-user-pic: url(../../resources/add_user.png);
     /* --chatlist-pic: url(../../resources/test.png); */
 }
 .chat-layout {
@@ -65,7 +66,8 @@
 .chatlist-item:hover {
     background-image: var(--svg-btn_hover);
 }
-.chatlist-item:active {
+.chatlist-item:active,
+.chatlist-item.selected {
     background-image: var(--svg-btn_active);
 }
 
@@ -84,6 +86,9 @@
     grid-row: 1 / 4;
 
     /* border: 1px dashed wheat; */
+}
+.add-user-item .chatlist-pic {
+    background-image: var(--add-user-pic);
 }
 .chatlist-username {
     grid-row: 2;
@@ -139,17 +144,25 @@
     flex-shrink: 0;
     /* flex-basis: 100px; */
     padding: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* background-color: cornflowerblue; */
     display: flex;
+
+    overflow: visible;
+    align-items: center;
+    
 }
 textarea {
+    cursor: var(--cursor-input) 6 12, auto;
     width: 100%;
     box-sizing: border-box;
     color: var(--secondary-color);
     font: inherit;
     outline: none;
     background-color: #0e0e17cc;
+}
+textarea::placeholder {
+    color: var(--secondary-color);
 }
 
 input {
@@ -159,6 +172,7 @@ input {
     background-color: #0e0e17cc;
     width: 100%;
     box-sizing: border-box;
+    padding: 5px;
 
     /* background: linear-gradient(#0e0e17cc), linear-gradient(#FF3B451A); */
 }
@@ -189,6 +203,12 @@ input:focus {
     background-color: #FF3B45;
 }
 
+.chat-greeting {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--secondary-color);
+}
 .message {
     color: var(--secondary-color);
     font-size: 12pt;
@@ -208,6 +228,10 @@ input:focus {
     left: 0;
     width: 100px;
     height: 86px;
+}
+.img {
+    background-image: var(--chatlist-pic);
+    clip-path: path("M0 0H100V72L84 85H0V0Z");
 }
 
 .profile-name {
@@ -274,3 +298,20 @@ font: inherit;
 grid-area: 1 / 1 / 2 / 2;
 }
 
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: -320%;
+    left: -50%;
+    height: 100px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content > .btn {
+    width: 180px;
+    height: 37px;
+}
