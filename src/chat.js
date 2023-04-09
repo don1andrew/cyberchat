@@ -10,7 +10,11 @@ function elemCreator(type) {
 const divCreator = elemCreator('div');
 
 function mockSend(text, sender) {
-    const msg = divCreator(text, ['message', sender === 'THEIRS' ? 'message-theirs' : 'message-ours']);
+    const msg = divCreator('', ['message', sender === 'THEIRS' ? 'message-theirs' : 'message-ours'])
+    const msgText = divCreator(text, []);
+    const timeStamp = divCreator(new Date().toISOString().substring(0, 19).replace('T', '_'), ['timestamp']);
+    msg.appendChild(msgText);
+    msg.appendChild(timeStamp);
 
     const chat = document.querySelector('.chat-layout-main');
     chat.prepend(msg);

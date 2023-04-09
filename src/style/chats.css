@@ -131,7 +131,7 @@
 .chat-layout-main {
     flex-grow: 1;
     padding: 10px;
-    
+    gap: 17px;
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -214,12 +214,28 @@ input:focus {
     font-size: 12pt;
     padding: 5px;
     /* width: 200px; */
-    margin: 5px 0;
+    /* margin: 5px 0; */
     max-width: 90%;
     border: 1px solid var(--secondary-color);
+    position: relative;
+    /* text-align: center; */
+    min-width: 100px;
+}
+.message:first-child {
+    margin-bottom: 2px;
 }
 .message-ours {
     align-self: flex-end;
+}
+.timestamp {
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    font-size: 7pt;
+    width: max-content;
+}
+.message-ours .timestamp {
+    left: 0;
 }
 
 .profile-pic {
