@@ -1,5 +1,5 @@
 :root {
-    --svg-signup-frame: url(../../resources/signup_frame.svg);
+    --svg-signup-frame: url(/resources/signup_frame.svg);
 }
 .signup-frame {
     background: no-repeat var(--svg-signup-frame);

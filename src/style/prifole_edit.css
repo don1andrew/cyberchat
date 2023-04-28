@@ -1,5 +1,5 @@
 :root {
-    --svg-profile-edit-frame: url(../../resources/profile_edit_frame.svg);
+    --svg-profile-edit-frame: url(/resources/profile_edit_frame.svg);
 }
 .profile-edit-frame {
     background: no-repeat var(--svg-profile-edit-frame);

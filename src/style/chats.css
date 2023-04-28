@@ -1,11 +1,8 @@
 :root {
     --secondary-color: #F1B537;
-    --svg-btn: url(../../resources/btn.svg#default);
-    --svg-btn_hover: url(../../resources/btn.svg#hover);
-    --svg-btn_active: url(../../resources/btn.svg#active);
 
-    --chatlist-pic: url(../../resources/user_pic_def.png);
-    --add-user-pic: url(../../resources/add_user.png);
+    --chatlist-pic: url(/resources/user_pic_def.png);
+    --add-user-pic: url(/resources/add_user.png);
     /* --chatlist-pic: url(../../resources/test.png); */
 }
 .chat-layout {

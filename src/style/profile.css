@@ -1,59 +1,19 @@
 :root {
-    --svg-btn: url(../../resources/btn.svg#default);
-    --svg-btn_hover: url(../../resources/btn.svg#hover);
-    --svg-btn_active: url(../../resources/btn.svg#active);
+    --svg-profile-frame: url(/resources/profile_frame.svg);
 
-    --svg-profile-frame: url(../../resources/profile_frame.svg);
-
-    --svg-profile-pic-frame_default: url(../../resources/profile_pic_frame.svg#default);
+    --svg-profile-pic-frame_default: url(/resources/profile_pic_frame.svg#default);
     --svg-profile-pic-frame_hover_default: none;
-    --svg-profile-pic-frame_hover_hover: url(../../resources/profile_pic_frame.svg#hover);
+    --svg-profile-pic-frame_hover_hover: url(/resources/profile_pic_frame.svg#hover);
     --svg-profile-pic-frame_hover: var(--svg-profile-pic-frame_hover_default);
 
-    --user-pic: url(../../resources/user_pic.png);
+    --user-pic: url(/resources/user_pic.png);
     /* --user-pic: url(../../resources/test.png); */
 
-    --svg-error-frame: url(../../resources/error_frame.svg);
+    --svg-error-frame: url(/resources/error_frame.svg);
 }
 
-.btn-container {
-    position: absolute;
-    top: 0;
-    margin: 15px 5px;
-}
-.btn-container_left {
-    left: 0;
-}
-.btn-container_right {
-    right: 0;
-}
 
-.btn {
-    background-image: var(--svg-btn);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 5px;
-    width: 228px;
-    height: 45px;
-}
-.btn_secondary {
-    color: var(--main-color);
-}
-.btn:hover {
-    background-image: var(--svg-btn_hover);
-}
-.btn:active {
-    background-image: var(--svg-btn_active);
-}
+
 
 .profile-container {
     position: absolute;
@@ -84,17 +44,7 @@
     float: right;
 }
 
-.profile-pic {
-    background: no-repeat var(--svg-profile-pic-frame_hover), no-repeat var(--svg-profile-pic-frame_default);
-    background-size: contain;
-    background-position: center;
-    background-origin: border-box;
-    display: inline-block;
-    overflow: hidden;
-    width: 200px;
-    height: 170px;
-    padding: 5px;
-}
+
 
 .img {
     background: no-repeat var(--user-pic);

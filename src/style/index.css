@@ -1,27 +1,34 @@
 @font-face {
     font-family: Quantico;
-    src: url(../../resources/fonts/QuanticoCyrillicMod-Regular.otf), url(../../resources/fonts/quantico/Quantico-Regular.ttf);
+    src: url(/resources/fonts/QuanticoCyrillicMod-Regular.otf), url(/resources/fonts/quantico/Quantico-Regular.ttf);
 }
 @font-face {
     font-family: QuanticoPassword;
-    src: url(../../resources/fonts/QuanticoPassword.otf);
+    src: url(/resources/fonts/QuanticoPassword.otf);
 }
 :root {
-    --cursor: url(../../resources/cursor.svg);
-    --cursor-input: url(../../resources/cursor_input.svg);
+    --cursor: url(/resources/cursor.svg);
+    --cursor-input: url(/resources/cursor_input.svg);
     --accent-color: #5EF6FF;
     --main-color: #FF3B45;
 
-    --svg-login-frame: url(../../resources/login_frame.svg);
-    --svg-form-input: url(../../resources/form_input.svg#default);
-    --svg-form-input_invalid: url(../../resources/form_input.svg#invalid);
+    --svg-login-frame: url(/resources/login_frame.svg);
+    --svg-form-input: url(/resources/form_input.svg#default);
+    --svg-form-input_invalid: url(/resources/form_input.svg#invalid);
 
-    --svg-btn-left: url(../../resources/btn_modal.svg#l-default);
-    --svg-btn-right: url(../../resources/btn_modal.svg#r-default);
-    --svg-btn-left_hover: url(../../resources/btn_modal.svg#l-hover);
-    --svg-btn-right_hover: url(../../resources/btn_modal.svg#r-hover);
-    --svg-btn-left_active: url(../../resources/btn_modal.svg#l-active);
-    --svg-btn-right_active: url(../../resources/btn_modal.svg#r-active);
+    --svg-btn-left: url(/resources/btn_modal.svg#l-default);
+    --svg-btn-right: url(/resources/btn_modal.svg#r-default);
+    --svg-btn-left_hover: url(/resources/btn_modal.svg#l-hover);
+    --svg-btn-right_hover: url(/resources/btn_modal.svg#r-hover);
+    --svg-btn-left_active: url(/resources/btn_modal.svg#l-active);
+    --svg-btn-right_active: url(/resources/btn_modal.svg#r-active);
+
+
+    /* try to move var declaration here to avoid ambiguousity when building with parcel */
+    --svg-btn: url(/resources/btn.svg#default);
+    --svg-btn_hover: url(/resources/btn.svg#hover);
+    --svg-btn_active: url(/resources/btn.svg#active);
+
 }
 
 body {
@@ -161,10 +168,60 @@ a, a:visited {
 .btn-right:active {
     background-image: var(--svg-btn-right_active);
 }
+
+.btn-container {
+    position: absolute;
+    top: 0;
+    margin: 15px 5px;
+}
+.btn-container_left {
+    left: 0;
+}
+.btn-container_right {
+    right: 0;
+}
+.btn {
+    background-image: var(--svg-btn);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 228px;
+    height: 45px;
+}
+.btn_secondary {
+    color: var(--main-color);
+}
+.btn:hover {
+    background-image: var(--svg-btn_hover);
+}
+.btn:active {
+    background-image: var(--svg-btn_active);
+}
+
+.profile-pic {
+    background: no-repeat var(--svg-profile-pic-frame_hover), no-repeat var(--svg-profile-pic-frame_default);
+    background-size: contain;
+    background-position: center;
+    background-origin: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: 200px;
+    height: 170px;
+    padding: 5px;
+}
 /*-------------------------------
 ---------------TEST-------------*/
 .ctest {
-    cursor: url(resources/cursor.svg) 12 12, auto;
+    cursor: url(/resources/cursor.svg) 12 12, auto;
 }
 .svg-test {
     width: 200px;
