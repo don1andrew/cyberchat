@@ -13,72 +13,72 @@
             <div class="chat-layout-search">
                 <input id="search" type="text" placeholder="SEARCH" autocomplete="off">
             </div>
-            <div class="chat-layout-chatlist">
-                <div class="chatlist-item">
+            <ul class="chat-layout-chatlist">
+                <li class="chatlist-item">
                     <div class="chatlist-pic"></div>
                     <div class="chatlist-username">ANDREW</div>
                     <div class="chatlist-message">Message preview</div>
                     <div class="chatlist-counter">99+</div>
-                </div>
-                <div class="chatlist-item">
+                </li>
+                <li class="chatlist-item">
                     <div class="chatlist-pic"></div>
                     <div class="chatlist-username">VASILY</div>
                     <div class="chatlist-message">YOU: Message preview</div>
                     <div class="chatlist-counter">12</div>
-                </div>
-                <div class="chatlist-item">
+                </li>
+                <li class="chatlist-item">
                     <div class="chatlist-pic"></div>
                     <div class="chatlist-username">ПЕНТАГОН</div>
                     <div class="chatlist-message">Хватит нас взламывать!</div>
                     <div class="chatlist-counter">5</div>
-                </div>
-                <div class="chatlist-item">
+                </li>
+                <li class="chatlist-item">
                     <div class="chatlist-pic"></div>
                     <div class="chatlist-username">TAKEMURA</div>
                     <div class="chatlist-message">Ohayou</div>
                     <div class="chatlist-counter"></div>
-                </div>
-                <div class="chatlist-item">
+                </li>
+                <li class="chatlist-item">
                     <div class="chatlist-pic"></div>
                     <div class="chatlist-username">САНЁК</div>
                     <div class="chatlist-message">Здарова</div>
                     <div class="chatlist-counter"></div>
-                </div>
-                <div class="chatlist-item">
+                </li>
+                <li class="chatlist-item">
                     <div class="chatlist-pic"></div>
                     <div class="chatlist-username">UNKNOWN USER</div>
                     <div class="chatlist-message"></div>
                     <div class="chatlist-counter"></div>
-                </div>
-                <div class="chatlist-item add-user-item">
+                </li>
+                <li class="chatlist-item add-user-item">
                     <div class="chatlist-pic"></div>
                     <div class="chatlist-username">SEARCH</div>
                     <div class="chatlist-message">ADD USER</div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
-        <div class="column-2">
-            <div class="chat-layout-user">
+        <main class="column-2">
+            <header class="chat-layout-user">
                     <div class="profile-pic">
                         <div class="img"></div>
                     </div>
-                    <div class="profile-name">ANDREW</div>
-            </div>
+                    <h1 class="profile-name">ANDREW</h1>
+            </header>
             <div class="divider"></div>
-            <div class="chat-layout-main">
-                <div class="message message-theirs">
-                    <div>В чате есть фейковая отправка и поиск)</div>
+            <article class="chat-layout-main">
+                <section class="message message-theirs">
+                    <div>В чате есть фейковая отправка и поиск</div>
                     <div class="timestamp">2023-04-09_19:23:90</div>
-                </div>
-                <div class="message message-ours">
+                </section>
+                <section class="message message-ours">
                     <div>A?</div>
                     <div class="timestamp">2023-04-09_19:23:90</div>
-                </div>
-                <div class="message message-theirs">
+                </section>
+                <section class="message message-theirs">
                     <div>message</div>
                     <div class="timestamp">2023-04-09_19:23:90</div>
-                </div>
-                <div class="message message-ours">
+                </section>
+                <section class="message message-ours">
                     <div>
                         ::-webkit-scrollbar — the entire scrollbar.
                         <br/>::-webkit-scrollbar-button — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
@@ -91,21 +91,21 @@
                         <br/>::-webkit-resizer — the draggable resizing handle that appears at the bottom corner of some elements.
                     </div>
                     <div class="timestamp">2023-04-09_19:23:90</div>
-                </div>
-                <div class="message message-theirs">
+                </section>
+                <section class="message message-theirs">
                     <div>message</div>
                     <div class="timestamp">2023-04-09_19:23:90</div>
-                </div>
-                <div class="message message-ours">
+                </section>
+                <section class="message message-ours">
                     <div>
                         Каждый раз, когда в программе вызывается функция, внутри интерпретатора создается специальный словарь LexicalEnvironment (лексическое окружение), привязанный к этому вызову. Все определения констант, переменных и прочего внутри функции автоматически записываются в словарь. Имя определения (идентификатор, то есть имя константы, переменной и так далее) становится ключом, а значение определения становится значением в словаре. К таким определениям относятся аргументы, константы, функции, переменные и т.д. Лексическое окружение — это хранилище для данных в памяти и механизм для извлечения этих данных при обращении.
                     </div>
                     <div class="timestamp">2023-04-09_19:23:90</div>
-                </div>
-            </div>
-            <div class="chat-layout-textarea">
+                </section>
+            </article>
+            <article class="chat-layout-textarea">
                 <div class="grow-wrap">
-                    <textarea id="message" placeholder="INPUT YOUR MESSAGE HERE" rows="1" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+                    <textarea id="message" name="message" placeholder="INPUT YOUR MESSAGE HERE" rows="1" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
                 </div>
                 <div class="dropdown">
                     <button class="chat-btn">APPEND</button>
@@ -115,12 +115,12 @@
                     </div>
                 </div>
                 <button class="chat-btn" id="send">SEND</button>
-            </div>
-        </div>
+            </article>
+        </main>
     </div>
-    <div class="btn-container btn-container_right">
+    <menu class="btn-container btn-container_right">
         <a href="../pages/profile.html"><button class="btn">PROFILE</button></a>
         <button class="btn btn_secondary">DELETE USER</button>
-    </div>
+    </menu>
 </body>
 </html>

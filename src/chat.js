@@ -8,9 +8,10 @@ function elemCreator(type) {
     }
 }
 const divCreator = elemCreator('div');
+const sectionCreator = elemCreator('section');
 
 function mockSend(text, sender) {
-    const msg = divCreator('', ['message', sender === 'THEIRS' ? 'message-theirs' : 'message-ours'])
+    const msg = sectionCreator('', ['message', sender === 'THEIRS' ? 'message-theirs' : 'message-ours'])
     const msgText = divCreator(text, []);
     const timeStamp = divCreator(new Date().toISOString().substring(0, 19).replace('T', '_'), ['timestamp']);
     msg.appendChild(msgText);
