@@ -3,7 +3,6 @@
 
     --chatlist-pic: url(/resources/user_pic_def.png);
     --add-user-pic: url(/resources/add_user.png);
-    /* --chatlist-pic: url(../../resources/test.png); */
 }
 .chat-layout {
     position: absolute;
@@ -11,7 +10,6 @@
     height: 100%;
 
     display: flex;
-    /* background-color: brown; */
 }
 .column-1 {
     flex-basis: 320px;
@@ -29,21 +27,15 @@
     flex-direction: column;
 }
 .chat-layout-search {
-    /* flex-basis: 100px; */
     flex-shrink: 0;
     padding: 10px 3px;
     padding-top: 15px;
-    /* border-bottom: 3px solid #FF3B451A; */
     overflow: scroll;
-
-    /* height: 100px; */
-    /* background-color: hwb(348 8% 14%); */
 }
 .chat-layout-chatlist {
     flex-grow: 1;
     overflow-y: scroll;
     padding: 10px 0;
-    /* background-color: deeppink; */
 }
 
 .chatlist-item {
@@ -58,7 +50,6 @@
     grid-template-columns: 0.3fr 1fr 4fr 35px 5px;
     grid-template-rows:1fr 3fr 3fr 1fr;
     align-items: center;
-    /* border: 1px dotted #4df137; */
 }
 .chatlist-item:hover {
     background-image: var(--svg-btn_hover);
@@ -73,16 +64,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
-    /* width: 17%; */
-    /* margin: 2%; */
-    /* margin-left: 5%; */
     margin-bottom: -5%;
     aspect-ratio: 1 / 1;
-    /* height: 50px; */
     grid-column-start: 2;
     grid-row: 1 / 4;
-
-    /* border: 1px dashed wheat; */
 }
 .add-user-item .chatlist-pic {
     background-image: var(--add-user-pic);
@@ -91,7 +76,6 @@
     grid-row: 2;
     grid-column-start: 3;
     padding-left: 5%;
-    /* line-height: 1em; */
 }
 .chatlist-message,
 .chatlist-counter {
@@ -99,19 +83,14 @@
     font-size: 11pt;
 }
 .chatlist-message {
-    /* float: right; */
-    /* width: 68%; */
-    /* margin: 10px; */
     grid-row: 3;
     grid-column-start: 3;
     padding-left: 5%;
 
     overflow: hidden;
     max-height: 1.5em;
-    /* line-height: 1em; */
 }
 .chatlist-counter {
-    /* grid-row-start: 2; */
     grid-column-start: 4;
     grid-row: 2 / 4;
     justify-self: end;
@@ -122,8 +101,6 @@
     flex-basis: 115px;
     flex-shrink: 0;
     position: relative;
-
-    /* background-color: blueviolet; */
 }
 .chat-layout-main {
     flex-grow: 1;
@@ -133,21 +110,15 @@
     flex-direction: column-reverse;
     align-items: flex-start;
     overflow-y: scroll;
-
-    /* background-color: rgb(42, 95, 165); */
 }
 
 .chat-layout-textarea {
     flex-shrink: 0;
-    /* flex-basis: 100px; */
     padding: 10px;
-    /* overflow: hidden; */
-    /* background-color: cornflowerblue; */
     display: flex;
 
     overflow: visible;
     align-items: center;
-    
 }
 textarea {
     cursor: var(--cursor-input) 6 12, auto;
@@ -170,8 +141,6 @@ input {
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
-
-    /* background: linear-gradient(#0e0e17cc), linear-gradient(#FF3B451A); */
 }
 input:focus {
     border-color: #FF3B45;
@@ -210,12 +179,9 @@ input:focus {
     color: var(--secondary-color);
     font-size: 12pt;
     padding: 5px;
-    /* width: 200px; */
-    /* margin: 5px 0; */
     max-width: 90%;
     border: 1px solid var(--secondary-color);
     position: relative;
-    /* text-align: center; */
     min-width: 100px;
 }
 .message:first-child {
@@ -261,9 +227,6 @@ input:focus {
     background: linear-gradient(transparent 39%,#FF3B451A 40% 60%, transparent 65%);
 }
 
-
-
-
 .chat-btn {
     font: inherit;
     color: var(--secondary-color);
@@ -273,42 +236,40 @@ input:focus {
 }
 .chat-btn:hover {
     text-decoration: underline;
-    /* border-bottom: 1px solid var(--secondary-color); */
 }
-
 
 .grow-wrap {
-/* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
-display: grid;
-flex-grow: 1;
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
+    flex-grow: 1;
 }
 .grow-wrap::after {
-/* Note the weird space! Needed to preventy jumpy behavior */
-content: attr(data-replicated-value) " ";
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
 
-/* This is how textarea text behaves */
-white-space: pre-wrap;
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
 
-/* Hidden from view, clicks, and screen readers */
-visibility: hidden;
-max-height: 78px;
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+    max-height: 78px;
 }
 .grow-wrap > textarea {
-/* You could leave this, but after a user resizes, then it ruins the auto sizing */
-resize: none;
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
 
-/* Firefox shows scrollbar on growth, you can hide like this. */
-overflow: hidden;
+    /* Firefox shows scrollbar on growth, you can hide like this. */
+    overflow: hidden;
 }
 .grow-wrap > textarea,
 .grow-wrap::after {
-/* Identical styling required!! */
-border: 1px solid var(--secondary-color);
-padding: 0.5rem;
-font: inherit;
+    /* Identical styling required!! */
+    border: 1px solid var(--secondary-color);
+    padding: 0.5rem;
+    font: inherit;
 
-/* Place on top of each other */
-grid-area: 1 / 1 / 2 / 2;
+    /* Place on top of each other */
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 .dropdown {

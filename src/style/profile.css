@@ -7,19 +7,8 @@
     --svg-profile-pic-frame_hover: var(--svg-profile-pic-frame_hover_default);
 
     --user-pic: url(/resources/user_pic.png);
-    /* --user-pic: url(../../resources/test.png); */
 
     --svg-error-frame: url(/resources/error_frame.svg);
-}
-
-
-
-
-.profile-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .content-row {
@@ -27,13 +16,9 @@
 }
 
 .profile-frame {
-    background: no-repeat var(--svg-profile-frame);
-    background-size: contain;
+    background-image: var(--svg-profile-frame);
     min-width: 660px;
     min-height: 370px;
-    padding: 20px 20px 0 55px;
-    box-sizing: border-box;
-    width: fit-content;
 }
 .profile-name {
     position: absolute;
@@ -43,8 +28,6 @@
 .form-element-value {
     float: right;
 }
-
-
 
 .img {
     background: no-repeat var(--user-pic);
@@ -69,22 +52,12 @@
     height: 100%;
     position: fixed;
     display: none;
-    /* font-family: 'Quantico', sans-serif; */
-    /* font-size: 14pt; */
-    /* color: var(--accent-color); */
 }
 
 .error-frame {
-    background: no-repeat var(--svg-error-frame);
-    background-size: contain;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-image: var(--svg-error-frame);
     color: var(--main-color);
     min-width: 577px;
     min-height: 115px;
     padding: 10px 20px 0 70px;
-    box-sizing: border-box;
-    
 }

@@ -34,7 +34,6 @@ function handleSend() {
 
         textArea.value = null;
     }
-    console.log(textArea.value);
 }
 
 const allChats = document.querySelectorAll('.chatlist-item:not(.add-user-item)')
@@ -61,11 +60,8 @@ function searchChats(str) {
             .innerText
             .toLowerCase()
             .includes(str.toLowerCase());
-        // console.log(username);
-        // return true;
     })
     if (!result.length) {
-        // const resultNode = document.createTextNode('NOT FOUND');
         const resultNode = document.createElement('div');
         resultNode.innerText = 'NOT FOUND';
         resultNode.style.textAlign = 'center';
@@ -106,8 +102,6 @@ allChats.forEach((chat) => {
         selected = e.currentTarget;
         selected.classList.add('selected');
         document.querySelector('.btn_secondary').style.display = 'block';
-
-        // console.log(e.currentTarget.querySelector('.chatlist-username').innerText);
 
         profileName.innerText = e.currentTarget.querySelector('.chatlist-username').innerText;
 
