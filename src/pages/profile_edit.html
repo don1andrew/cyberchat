@@ -8,12 +8,12 @@
     <title>Edit user info</title>
 </head>
 <body>
-    <div class="profile-edit-frame frame centered">
+    <form class="profile-edit-frame frame centered">
         <div class="form-content">
             <div class="form-element">
                 <div class="form-input">
                     EMAIL
-                    <input type="text" placeholder="EMAIL">
+                    <input type="text" name="email" placeholder="EMAIL">
                 </div>
                 <div class="invalid-message">
                     INVALID EMAIL
@@ -22,7 +22,7 @@
             <div class="form-element">
                 <div class="form-input">
                     LOGIN
-                    <input type="text" placeholder="LOGIN">
+                    <input type="text" name="login" placeholder="LOGIN">
                 </div>
                 <div class="invalid-message">
                     USER ALREADY EXISTS
@@ -31,7 +31,7 @@
             <div class="form-element">
                 <div class="form-input">
                     NAME
-                    <input type="text" placeholder="NAME">
+                    <input type="text" name="first_name" placeholder="NAME">
                 </div>
                 <div class="invalid-message">
                     INVALID NAME
@@ -40,7 +40,7 @@
             <div class="form-element">
                 <div class="form-input">
                     LASTNAME
-                    <input type="text" placeholder="LASTNAME">
+                    <input type="text" name="second_name" placeholder="LASTNAME">
                 </div>
                 <div class="invalid-message">
                     INVALID LASTNAME
@@ -49,7 +49,7 @@
             <div class="form-element">
                 <div class="form-input">
                     PHONE
-                    <input type="text" placeholder="PHONE">
+                    <input type="text" name="phone"  placeholder="PHONE">
                 </div>
                 <div class="invalid-message">
                     INVALID PHONE
@@ -58,12 +58,12 @@
         </div>
         <div class="form-btn-container">
             <a href="../pages/profile.html">
-                <button class="btn-left">CANCEL</button>
+                <button type="button" class="btn-left">CANCEL</button>
             </a>
             <a href="../pages/500.html">
-                <button class="btn-right">SAVE</button>
+                <button type="button" class="btn-right">SAVE</button>
             </a>
         </div>
-    </div>
+    </form>
 </body>
 </html>

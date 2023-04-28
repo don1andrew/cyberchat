@@ -7,7 +7,7 @@
     <title>Login page</title>
 </head>
 <body>
-    <div class="login-frame frame centered">
+    <form class="login-frame frame centered">
         <div class="form-content">
             <div class="form-label">
                 AUTHORIZATION
@@ -15,7 +15,7 @@
             <div class="form-element">
                 <div class="form-input">
                     LOGIN
-                    <input type="text" placeholder="LOGIN">
+                    <input type="text" name="login" placeholder="LOGIN">
                 </div>
                 <div class="invalid-message">
                     INVALID LOGIN
@@ -24,7 +24,7 @@
             <div class="form-element">
                 <div class="form-input">
                     PASSWORD
-                    <input type="password" placeholder="PASSWORD">
+                    <input type="password" name="password" placeholder="PASSWORD">
                 </div>
                 <div class="invalid-message">
                     INVALID PASSWORD
@@ -33,12 +33,12 @@
         </div>
         <div class="form-btn-container">
             <a href="signup.html">
-                <button class="btn-left">SIGN UP</button>
+                <button type="button" class="btn-left">SIGN UP</button>
             </a>
             <a href="../pages/chats.html">
-                <button class="btn-right">LOG IN</button>
+                <button type="button" class="btn-right">LOG IN</button>
             </a>
         </div>
-    </div>
+    </form>
 </body>
 </html>
