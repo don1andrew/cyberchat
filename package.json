@@ -5,15 +5,18 @@
   "scripts": {
     "start": "parcel src/pages/index.html --no-source-maps -p 1488",
     "build": "parcel build src/pages/index.html --no-source-maps",
-    "clean": "del dist /Q /F",
+    "cleanup-win": "del dist .parcel-cache /Q /F",
+    "cleanup-unix": "rm -rf dist/* .parcel-cache/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Andrey Zinchenko",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-inline-string": "^2.8.3",
     "parcel": "^2.8.3",
-    "parcel-transformer-hbs": "^1.0.4"
+    "parcel-transformer-hbs": "^1.0.4",
+    "postcss": "^8.4.23",
+    "postcss-nested": "^6.0.1"
   },
   "dependencies": {
     "handlebars": "^4.7.7"

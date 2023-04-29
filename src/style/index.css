@@ -26,6 +26,11 @@
     --svg-btn: url(/resources/btn.svg#default);
     --svg-btn_hover: url(/resources/btn.svg#hover);
     --svg-btn_active: url(/resources/btn.svg#active);
+
+    --svg-profile-pic-frame_default: url(/resources/profile_pic_frame.svg#default);
+    --svg-profile-pic-frame_hover_default: none;
+    --svg-profile-pic-frame_hover_hover: url(/resources/profile_pic_frame.svg#hover);
+    --svg-profile-pic-frame_hover: var(--svg-profile-pic-frame_hover_default);
 }
 
 body {
@@ -115,13 +120,13 @@ a, a:visited {
     height: 52px;
     display: table-cell;
     vertical-align: middle;
-}
 
-.form-input_invalid {
-   background-image: var(--svg-form-input_invalid);
-}
-.form-input_invalid + .invalid-message {
-    display: initial;
+    &_invalid {
+        background-image: var(--svg-form-input_invalid);
+    }
+    &_invalid + .invalid-message {
+        display: initial;
+    } 
 }
 
 .invalid-message {
@@ -156,34 +161,38 @@ a, a:visited {
 }
 .btn-left {
     background-image: var(--svg-btn-left);
+
+    &:hover {
+        background-image: var(--svg-btn-left_hover);
+    }
+    &:active {
+        background-image: var(--svg-btn-left_active);
+    }
 }
 .btn-right {
     background-image: var(--svg-btn-right);
-}
-.btn-left:hover {
-    background-image: var(--svg-btn-left_hover);
-}
-.btn-right:hover {
-    background-image: var(--svg-btn-right_hover);
-}
-.btn-left:active {
-    background-image: var(--svg-btn-left_active);
-}
-.btn-right:active {
-    background-image: var(--svg-btn-right_active);
+
+    &:hover {
+        background-image: var(--svg-btn-right_hover);
+    }
+    &:active {
+        background-image: var(--svg-btn-right_active);
+    }
 }
 
 .btn-container {
     position: absolute;
     top: 0;
     margin: 15px 5px;
+
+    &_left {
+        left: 0;
+    }
+    &_right {
+        right: 0;
+    } 
 }
-.btn-container_left {
-    left: 0;
-}
-.btn-container_right {
-    right: 0;
-}
+
 .btn {
     background-image: var(--svg-btn);
     background-size: contain;
@@ -200,15 +209,16 @@ a, a:visited {
     margin-bottom: 5px;
     width: 228px;
     height: 45px;
-}
-.btn_secondary {
-    color: var(--main-color);
-}
-.btn:hover {
-    background-image: var(--svg-btn_hover);
-}
-.btn:active {
-    background-image: var(--svg-btn_active);
+
+    &_secondary {
+        color: var(--main-color);
+    }
+    &:hover {
+        background-image: var(--svg-btn_hover);
+    }
+    &:active {
+        background-image: var(--svg-btn_active);
+    }
 }
 
 .profile-pic {
@@ -221,4 +231,12 @@ a, a:visited {
     width: 200px;
     height: 170px;
     padding: 5px;
+}
+.img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }

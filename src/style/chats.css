@@ -50,13 +50,15 @@
     grid-template-columns: 0.3fr 1fr 4fr 35px 5px;
     grid-template-rows:1fr 3fr 3fr 1fr;
     align-items: center;
-}
-.chatlist-item:hover {
-    background-image: var(--svg-btn_hover);
-}
-.chatlist-item:active,
-.chatlist-item.selected {
-    background-image: var(--svg-btn_active);
+
+    &:hover {
+        background-image: var(--svg-btn_hover);
+    }
+    &:active,
+    &.selected {
+        background-image: var(--svg-btn_active);
+    }
+
 }
 
 .chatlist-pic {
@@ -128,9 +130,10 @@ textarea {
     font: inherit;
     outline: none;
     background-color: #0e0e17cc;
-}
-textarea::placeholder {
-    color: var(--secondary-color);
+
+    &::placeholder {
+        color: var(--secondary-color);
+    }    
 }
 
 input {
@@ -141,11 +144,13 @@ input {
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
+
+    &:focus {
+        border-color: #FF3B45;
+        background: linear-gradient(#FF3B451A, #FF3B451A), linear-gradient(#0e0e17cc, #0e0e17cc);
+    }    
 }
-input:focus {
-    border-color: #FF3B45;
-    background: linear-gradient(#FF3B451A, #FF3B451A), linear-gradient(#0e0e17cc, #0e0e17cc);
-}
+
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -183,10 +188,12 @@ input:focus {
     border: 1px solid var(--secondary-color);
     position: relative;
     min-width: 100px;
+
+    &:first-child {
+        margin-bottom: 2px;
+    }
 }
-.message:first-child {
-    margin-bottom: 2px;
-}
+
 .message-ours {
     align-self: flex-end;
 }
@@ -208,7 +215,7 @@ input:focus {
     width: 100px;
     height: 86px;
 }
-.img {
+.img-user {
     background-image: var(--chatlist-pic);
     clip-path: path("M0 0H100V72L84 85H0V0Z");
 }
@@ -233,47 +240,54 @@ input:focus {
     background: none;
     outline: none;
     border: none;
+
+    &:hover {
+        text-decoration: underline;
+    }    
 }
-.chat-btn:hover {
-    text-decoration: underline;
-}
+
 
 .grow-wrap {
     /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
     display: grid;
     flex-grow: 1;
-}
-.grow-wrap::after {
-    /* Note the weird space! Needed to preventy jumpy behavior */
-    content: attr(data-replicated-value) " ";
 
-    /* This is how textarea text behaves */
-    white-space: pre-wrap;
+    &::after {
+        /* Note the weird space! Needed to preventy jumpy behavior */
+        content: attr(data-replicated-value) " ";
 
-    /* Hidden from view, clicks, and screen readers */
-    visibility: hidden;
-    max-height: 78px;
-}
-.grow-wrap > textarea {
-    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
-    resize: none;
+        /* This is how textarea text behaves */
+        white-space: pre-wrap;
 
-    /* Firefox shows scrollbar on growth, you can hide like this. */
-    overflow: hidden;
-}
-.grow-wrap > textarea,
-.grow-wrap::after {
-    /* Identical styling required!! */
-    border: 1px solid var(--secondary-color);
-    padding: 0.5rem;
-    font: inherit;
+        /* Hidden from view, clicks, and screen readers */
+        visibility: hidden;
+        max-height: 78px;
+    }
+    & > textarea {
+        /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+        resize: none;
 
-    /* Place on top of each other */
-    grid-area: 1 / 1 / 2 / 2;
+        /* Firefox shows scrollbar on growth, you can hide like this. */
+        overflow: hidden;
+    }
+    & > textarea,
+    &::after {
+        /* Identical styling required!! */
+        border: 1px solid var(--secondary-color);
+        padding: 0.5rem;
+        font: inherit;
+
+        /* Place on top of each other */
+        grid-area: 1 / 1 / 2 / 2;
+    }
 }
 
 .dropdown {
     position: relative;
+
+    &:hover .dropdown-content {
+        display: block;
+    }    
 }
 .dropdown-content {
     display: none;
@@ -281,11 +295,9 @@ input:focus {
     top: -320%;
     left: -50%;
     height: 100px;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropdown-content > .btn {
-    width: 180px;
-    height: 37px;
+
+    & > .btn {
+        width: 180px;
+        height: 37px;
+    }    
 }
