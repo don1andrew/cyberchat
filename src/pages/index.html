@@ -2,43 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/index.css">
+    <!-- <link rel="stylesheet" href="../style/index.css"> -->
+    <script defer type="module" src="../scripts/index.js" ></script>
     <script defer src="../invalid.js" ></script>
     <title>Login page</title>
 </head>
 <body>
-    <form class="login-frame frame centered">
-        <div class="form-content">
-            <h1 class="form-label">
-                AUTHORIZATION
-            </h1>
-            <section class="form-element">
-                <div class="form-input">
-                    LOGIN
-                    <input type="text" name="login" placeholder="LOGIN">
-                </div>
-                <div class="invalid-message">
-                    INVALID LOGIN
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    PASSWORD
-                    <input type="password" name="password" placeholder="PASSWORD">
-                </div>
-                <div class="invalid-message">
-                    INVALID PASSWORD
-                </div>
-            </section>
-        </div>
-        <nav class="form-btn-container">
-            <a href="signup.html">
-                <button type="button" class="btn-left">SIGN UP</button>
-            </a>
-            <a href="../pages/chats.html">
-                <button type="button" class="btn-right">LOG IN</button>
-            </a>
-        </nav>
-    </form>
+    <main id="root"></main>
 </body>
 </html>

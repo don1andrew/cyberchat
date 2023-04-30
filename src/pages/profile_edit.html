@@ -2,68 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/index.css">
-    <link rel="stylesheet" href="../style/prifole_edit.css">
+    <script defer type="module" src="../scripts/profile_edit.js"></script>
     <script defer src="../invalid.js"></script>
     <title>Edit user info</title>
 </head>
 <body>
-    <form class="profile-edit-frame frame centered">
-        <div class="form-content">
-            <section class="form-element">
-                <div class="form-input">
-                    EMAIL
-                    <input type="text" name="email" placeholder="EMAIL">
-                </div>
-                <div class="invalid-message">
-                    INVALID EMAIL
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    LOGIN
-                    <input type="text" name="login" placeholder="LOGIN">
-                </div>
-                <div class="invalid-message">
-                    USER ALREADY EXISTS
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    NAME
-                    <input type="text" name="first_name" placeholder="NAME">
-                </div>
-                <div class="invalid-message">
-                    INVALID NAME
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    LASTNAME
-                    <input type="text" name="second_name" placeholder="LASTNAME">
-                </div>
-                <div class="invalid-message">
-                    INVALID LASTNAME
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    PHONE
-                    <input type="text" name="phone"  placeholder="PHONE">
-                </div>
-                <div class="invalid-message">
-                    INVALID PHONE
-                </div>
-            </section>
-        </div>
-        <div class="form-btn-container">
-            <a href="../pages/profile.html">
-                <button type="button" class="btn-left">CANCEL</button>
-            </a>
-            <a href="../pages/500.html">
-                <button type="button" class="btn-right">SAVE</button>
-            </a>
-        </div>
-    </form>
+    <main id="root"></main>
 </body>
 </html>

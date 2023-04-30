@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel src/pages/index.html --no-source-maps -p 1488",
+    "start": "parcel src/pages/*.html --no-source-maps -p 1488",
     "build": "parcel build src/pages/index.html --no-source-maps",
     "cleanup-win": "del dist .parcel-cache /Q /F",
     "cleanup-unix": "rm -rf dist/* .parcel-cache/*",
