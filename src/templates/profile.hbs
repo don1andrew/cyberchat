@@ -11,54 +11,23 @@
         <div class="profile-pic profile-pic_clickable">
             <div class="img img-user"></div>
         </div>
-        <h1 class="profile-name">ANDREW</h1>
+        <h1 class="profile-name">{{name}}</h1>
     </header>
     <article class="profile-frame frame">
         <div class="form-content">
-            <section class="form-element">
-                <div class="form-input">
-                    E-MAIL
-                    <div class="form-element-value">
-                        HACKER9000@GMAIL.COM
+            {{#each fields}}
+                <section class="form-element">
+                    <div class="form-input">
+                        {{label}}
+                        <div class="form-element-value">
+                            {{value}}
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    LOGIN
-                    <div class="form-element-value">
-                        HACKER9000
-                    </div>
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    NAME
-                    <div class="form-element-value">
-                        ANDREW
-                    </div>
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    LASTNAME
-                    <div class="form-element-value">
-                        UNIXENKO
-                    </div>
-                </div>
-            </section>
-            <section class="form-element">
-                <div class="form-input">
-                    PHONE
-                    <div class="form-element-value">
-                        +7 564 568 65 21
-                    </div>
-                </div>
-            </section>
+                </section>
+            {{/each}}
         </div>
     </article>
 </article>
-
 <div class="pop-over">
     <div class="error-frame frame centered">
         SOME ERROR OCCURED
