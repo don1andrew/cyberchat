@@ -2,6 +2,9 @@
   "name": "cyberchat",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "^18.0.0"
+  },
   "scripts": {
     "start": "node ./server.js",
     "serve": "parcel src/pages/*.html --no-source-maps -p 81",
