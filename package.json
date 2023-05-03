@@ -5,6 +5,13 @@
   "engines": {
     "node": "^18.0.0"
   },
+  "targets": {
+    "default": {
+      "engines": {
+        "browsers": ">= 50%"
+      }
+    }
+  },
   "scripts": {
     "start": "node ./server.js",
     "serve": "parcel src/pages/*.html --no-source-maps -p 81",

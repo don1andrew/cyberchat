@@ -8,10 +8,10 @@
 
 ### Команды для запуска
 После установки зависимостей `npm i` используйте следующие команды:
-`npm run build` - для сборки
-`npm run start` - для локального запуска Express на 300 порту
-`npm run serve` - для сборки и запуска в dev-режиме
-`npm run cleanup-win` или `npm run cleanup-unix` - для очистки целевой дирректории для сборки и кэша parcel
+* `npm run build` - для сборки
+* `npm run start` - для локального запуска Express на 3000 порту
+* `npm run serve` - для сборки и запуска в dev-режиме
+* `npm run cleanup-win` или `npm run cleanup-unix` - для очистки целевой дирректории для сборки и кэша parcel
 
 ### Развертывание
 Проект развернут на [Netlify](https://cyberchat2077.netlify.app/).
